@@ -1,0 +1,171 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(90deg, #333, #555, #333);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    background-size: 200% 200%;
+    animation: gradientAnimation 6s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+nav {
+    background: #444;
+    padding: 10px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #ff6347;
+}
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    transform: translateY(20px);
+    transition: all 0.6s ease-in-out;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: #fff;
+}
+
+.project {
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.project h3 {
+    color: #444;
+    transition: color 0.3s ease-in-out;
+}
+
+.project:hover h3 {
+    color: #ff6347;
+}
+
+/* Button Hover Effects */
+a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+a.button:hover {
+    background-color: #ff6347;
+    transform: scale(1.1);
+}
+
+/* Text Shadow on Hover */
+h2, h3 {
+    transition: text-shadow 0.3s;
+}
+
+h2:hover, h3:hover {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Gradient Backgrounds for Sections */
+#about {
+    background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+}
+
+#projects {
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+}
+
+#resume {
+    background: linear-gradient(135deg, #f6d365, #fda085);
+}
+
+#contact {
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    background: #ff6347;
+    z-index: 200;
+    transition: width 0.25s;
+}
+
+/* Typing Effect */
+#typing-effect {
+    font-size: 1.5em;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid #333; /* Cursor */
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #333; }
+}
