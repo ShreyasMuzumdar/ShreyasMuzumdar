@@ -14,11 +14,17 @@ body.dark-mode {
     color: white; /* Set text color to white for readability */
 }
 
+.selected {
+    padding-bottom: 8px;
+    border-bottom: 1px solid white;
+    /* Adds a white line below the selected item */
+}
+
 /* Ensure header has a white background */
 header {
     background-color: white; /* Set background color to white */
     color: black; /* Set text color to black for readability */
-    padding: 20px 0;
+    padding: 0px 0;
     text-align: center;
     transition: all 0.3s ease-in-out;
     background-size: 200% 200%;
@@ -45,6 +51,8 @@ body.dark-mode header {
 /* Title styles */
 h1 {
     color: black; /* Set title color to black */
+    margin-top: 0; /* Remove top margin */
+    margin-bottom: 0; /* Remove bottom margin */
 }
 
 /* Dark mode title styles */
@@ -60,7 +68,9 @@ body.dark-mode h1 {
 
 header h1 {
     font-size: 2.5em;
-    margin: 0;
+    margin: 0px;
+    padding: 0px;
+    border: 1px solid black;
 }
 
 nav {

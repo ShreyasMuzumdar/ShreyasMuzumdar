@@ -1,12 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Robots - Shreyas Muzumdar</title>
     <link rel="stylesheet" href="styles.css">
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+    <style>
+        .robots-container {
+            display: flex;
+            justify-content: center;
+            /* Center the robot divs horizontally */
+
+
+        }
+
+        .robot {
+            width: 40%;
+            height: auto;
+            /* Maintains the aspect ratio */
+            margin: 0.5%;
+            /* Creates small gap between images */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ccc;
+            /* Adds a border */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* Adds a shadow */
+            padding: 20px;
+            /* Adds padding inside the div */
+            border-radius: 10px;
+            /* Adds a border radius */
+            box-sizing: border-box;
+            /* Ensures padding and border are included in the width and height */
+        }
+
+        .robot img {
+            max-width: 100%;
+            /* Ensures images are responsive */
+            height: auto;
+            /* Maintains the aspect ratio */
+        }
+
+        .robot h3 {
+            margin-top: 0;
+            /* Removes top margin */
+            padding-top: 0;
+            /* Removes top padding */
+        }
+        .wide-paragraph {
+            width: 80%;
+            /* Sets the width of the paragraph to 80% */
+            margin: 0 auto 25px auto;
+            /* Centers the paragraph and adds a bottom margin of 25px */
+        }
+    </style>
 </head>
+
 <body>
     <div class="scroll-indicator"></div>
 
@@ -19,50 +71,33 @@
             <li><a href="index.html">About</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="resume.html">Resume</a></li>
-            <li><a href="robots.html">Robots</a></li>
+            <li class="selected"><a href="robots.html">Robots</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
-    <model-viewer src="BlackBox.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="BlackBox.webp" shadow-intensity="1">
-        <div class="progress-bar hide" slot="progress-bar">
-            <div class="update-bar"></div>
-        </div>
-        <button slot="ar-button" id="ar-button">
-            View in your space
-        </button>
-        <div id="ar-prompt">
-            <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
-        </div>
-    </model-viewer>
-
-    <section id="robots">
-        <h2>Robots</h2>
-        <div class="robot">
-
-
-
-            
-            
-
-
-
-
+    <div class="robots-container">
         <div class="robot">
             <h3>BlackBox</h3>
             <p>Details about Robot Project 2.</p>
-            <a href="BlackBox.glb" rel="ar">
+            <a href="BlackBox.usdz" rel="ar">
                 <img src="BlackBox.png" alt="Robot Project 2">
             </a>
         </div>
+        <div class="robot">
             <h3>PlugBot</h3>
-            <p> PlugBot was our robot during the Powerplay season. In the State Championship, we were the Winning Alliance - 1st Team Selected and had the highest scoring match in the State Championship with 269 points.</p>
+            <p class="wide-paragraph">
+                PlugBot was our robot during the Powerplay season. In the State Championship, we were the Winning
+                Alliance - 1st Team Selected and had the highest scoring match in the State Championship with 269
+                points.
+            </p>
             <a href="PlugBot.usdz" rel="ar">
                 <img src="PlugBot.png" alt="Robot Project 1">
             </a>
+        </div>
     </div>
-    </section>
 
     <script src="scripts.js"></script>
 </body>
+
 </html>
