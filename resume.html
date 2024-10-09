@@ -5,9 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume - Shreyas Muzumdar</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .pdf-pages {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* Allows wrapping if needed on smaller screens */
+        }
+
+        .pdf-pages img {
+            width: 49%; /* Ensures both pages share the available width equally */
+            height: auto; /* Maintains the aspect ratio */
+            margin: 0.5%; /* Creates small gap between images */
+        }
+
+    </style>
 </head>
 <body>
-    <button id="toggle-button">Toggle Lights</button>
     <div class="scroll-indicator"></div>
 
     <header>
@@ -23,15 +36,42 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-
-    <section id="resume">
-        <h2>Resume</h2>
-        <iframe src="Shreyas_Muzumdar_Resume.pdf" width="100%" height="600px">
-            This browser does not support PDFs. Please download the PDF to view it: 
-            <a href="Shreyas_Muzumdar_Resume.pdf">Download PDF</a>.
-        </iframe>
-    </section>
+        <div class="pdf-pages" >
+            <img src="Shreyas_Muzumdar_Resume-1.png" alt="PDF Page 1">
+            <img src="Shreyas_Muzumdar_Resume-2.png" alt="PDF Page 2">
+        </div>
 
     <script src="scripts.js"></script>
 </body>
 </html>
+
+
+<!--
+Another way would be to embed the pdf#toolbar
+
+
+<div class="pdf-container">
+    <embed 
+        src="Shreyas_Muzumdar_Resume.pdf#toolbar=0" 
+        width="100%" 
+        height="1200px" 
+        type="application/pdf"
+    >
+    </embed>
+</div>
+
+and it would need this style at the top toggle-button
+<style>
+    .pdf-container {
+        background-color: white; /* Set the background color to white */
+        padding: 10px; /* Optional: Add some padding around the embed */
+    }
+
+    .pdf-container embed {
+        background-color: white; /* Set the background color of the embed element */
+        border: none; /* Remove any border */
+    }
+</style>
+
+
+-->
