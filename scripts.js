@@ -25,6 +25,22 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 // End Google Tag Manager (noscript)
 
+// Google Analytics (gtag.js)
+(function() {
+    var gtagScript = document.createElement('script');
+    gtagScript.async = true;
+    gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-PLWWMBKS0V";
+    document.head.appendChild(gtagScript);
+
+    gtagScript.onload = function() {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-PLWWMBKS0V');
+    };
+})();
+// End Google Analytics (gtag.js)
+
 document.addEventListener('DOMContentLoaded', function() {
     // Typing effect
     const textElement = document.getElementById('typing-effect');
