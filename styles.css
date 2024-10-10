@@ -1,7 +1,9 @@
 /* Ensure the entire website has a white background */
 body {
-    background-color: white; /* Set background color to white */
-    color: black; /* Set text color to black for readability */
+    background-color: white;
+    /* Set background color to white */
+    color: black;
+    /* Set text color to black for readability */
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
@@ -10,14 +12,10 @@ body {
 
 /* Dark mode styles */
 body.dark-mode {
-    background-color: black; /* Set background color to black */
-    color: white; /* Set text color to white for readability */
-}
-
-.selected {
-    padding-bottom: 8px;
-    border-bottom: 1px solid white;
-    /* Adds a white line below the selected item */
+    background-color: black;
+    /* Set background color to black */
+    color: white;
+    /* Set text color to white for readability */
 }
 
 /* Ensure header has a white background */
@@ -33,44 +31,36 @@ header {
 
 /* Dark mode header styles */
 body.dark-mode header {
-    background-color: black; /* Set background color to black */
-    color: white; /* Set text color to white for readability */
-}
-
-/* Style for the toggle button */
-#toggle-button {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    padding: 10px;
-    background-color: #f0f0f0;
-    border: none; /* Remove border */
-    cursor: pointer;
-}
-
-/* Title styles */
-h1 {
-    color: black; /* Set title color to black */
-    margin-top: 0; /* Remove top margin */
-    margin-bottom: 0; /* Remove bottom margin */
-}
-
-/* Dark mode title styles */
-body.dark-mode h1 {
-    color: white; /* Set title color to white */
-}
-
-@keyframes gradientAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    background-color: black;
+    /* Set background color to black */
+    color: white;
+    /* Set text color to white for readability */
 }
 
 header h1 {
     font-size: 2.5em;
     margin: 0px;
     padding: 0px;
-    border: 1px solid black;
+}
+
+/* Dark mode title styles */
+body.dark-mode h1 {
+    color: white;
+    /* Set title color to white */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 nav {
@@ -85,6 +75,7 @@ nav {
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -96,36 +87,151 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 /* Dark mode styles */
 body.dark-mode nav {
-    background: #222; /* Darker background for dark mode */
+    background: #222;
+    /* Darker background for dark mode */
 }
 
 body.dark-mode nav ul li a {
-    color: #ddd; /* Lighter text color for dark mode */
+    color: #ddd;
+    /* Lighter text color for dark mode */
 }
 
 nav ul li a:hover {
     color: #ff6347;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Add background color on hover */
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none;
+    /* Hide by default */
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    nav ul {
+        text-align: center;
+        /* Center the text */
+        padding: 0px;
+        /* Remove padding */
+        padding-bottom: 2px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+}
+
+.robots-container {
+    display: flex;
+    justify-content: center;
+    /* Center the robot divs horizontally */
+    gap: 2%;
+    /* Add a gap between the robot divs */
+}
+
+.robot {
+    width: 40%;
+    height: auto;
+    /* Maintains the aspect ratio */
+    margin: 0.5%;
+    /* Creates small gap between images */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    /* Adds a border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Adds a shadow */
+    padding: 20px;
+    /* Adds padding inside the div */
+    border-radius: 15px;
+    /* Adds a border radius */
+    box-sizing: border-box;
+    /* Ensures padding and border are included in the width and height */
+}
+
+.robot img {
+    max-width: 100%;
+    /* Ensures images are responsive */
+    height: auto;
+    /* Maintains the aspect ratio */
+}
+
+.robot h3 {
+    margin-top: 0;
+    /* Removes top margin */
+    padding-top: 0;
+    /* Removes top padding */
+}
+
+.wide-paragraph {
+    width: 80%;
+    /* Sets the width of the paragraph to 80% */
+    margin: 0 auto 10px auto;
+    /* Centers the paragraph and adds a bottom margin of 10px */
+}
+
+.selected {
+    /* Adds a white line below the selected item */
+    border-bottom: 1px solid white;
+    padding-bottom: 3px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .robots-container {
+        flex-direction: column;
+        /* Stack the robot divs vertically */
+        align-items: center;
+        /* Center the robot divs */
+    }
+
+    .robot {
+        width: 80%;
+        /* Adjust the width for smaller screens */
+        margin-bottom: 20px;
+        /* Add some space between the stacked divs */
+    }
 }
 
 section {
+    display: flex;
+    flex-direction: column; /* Stack the children vertically */
+    justify-content: center; /* Center the children horizontally */
+    align-items: center; /* Center the children vertically */
     padding: 20px;
-    margin: 20px 0;
+    margin: 20px auto; /* Center the section horizontally */
     background: #fff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    opacity: 1;
-    transform: translateY(20px);
-    transition: all 0.6s ease-in-out;
+    width: 600px; /* Set a fixed width for the section */
+    text-align: center; /* Center the text inside the elements */
 }
 
 section.show {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    section {
+        margin-left: 20px;
+        margin-right: 20px;
+        width: '80vw';
+    }
 }
 
 footer {
@@ -172,25 +278,16 @@ a.button:hover {
 }
 
 /* Text Shadow on Hover */
-h2, h3 {
+h2,
+h3 {
     transition: text-shadow 0.3s;
 }
 
-h2:hover, h3:hover {
+h2:hover,
+h3:hover {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* Scroll Indicator */
-.scroll-indicator {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 5px;
-    background: #ff6347;
-    z-index: 200;
-    transition: width 0.25s;
-}
 
 /* Typing Effect */
 #typing-effect {
@@ -198,13 +295,30 @@ h2:hover, h3:hover {
     font-family: 'Courier New', Courier, monospace;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 4px solid #333; /* Cursor */
+    border-right: 4px solid #333;
+    /* Cursor */
     animation: blink-caret 0.75s step-end infinite;
+    width: 100%; /* Ensure the element takes the full width of its container */
+    max-width: 80%; /* Set a maximum width for the element */
+    margin: 0 auto; /* Center the element horizontally */
+    padding: 10px; /* Add some padding */
+    overflow: hidden; /* Hide any overflowing content */
+    white-space: pre-wrap; /* Preserve whitespace and wrap text */
+    word-wrap: break-word; /* Break long words to fit within the container */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+
 }
 
 @keyframes blink-caret {
-    from, to { border-color: transparent; }
-    50% { border-color: #333; }
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: #333;
+    }
 }
 
 body.light-mode {
@@ -216,7 +330,10 @@ body.light-mode {
 }
 
 /* Remove borders from sections and their child elements */
-section, section * {
-    border: none; /* Remove any border */
-    background-color: white; /* Ensure background remains white */
+section,
+section * {
+    border: none;
+    /* Remove any border */
+    background-color: white;
+    /* Ensure background remains white */
 }

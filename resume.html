@@ -10,12 +10,29 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap; /* Allows wrapping if needed on smaller screens */
+            margin-top: 20px;
         }
 
         .pdf-pages img {
-            width: 49%; /* Ensures both pages share the available width equally */
+            width: 40%; /* Ensures both pages share the available width equally */
             height: auto; /* Maintains the aspect ratio */
             margin: 0.5%; /* Creates small gap between images */
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        }
+
+        /* Media query for smaller screens */
+        @media (max-width: 768px) {
+            .pdf-pages {
+                flex-direction: column; /* Stack the images vertically */
+                align-items: center; /* Center the images horizontally */
+            }
+
+            .pdf-pages img {
+                width: 90%; /* Adjust the width for smaller screens */
+                margin: 10px 0; /* Add some space between the stacked images */
+            }
         }
 
     </style>
@@ -29,7 +46,7 @@
 
     <nav>
         <ul>
-            <li><a href="index.html">About</a></li>
+            <li><a href="index.html">Welcome</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li class="selected"><a href="resume.html">Resume</a></li>
             <li><a href="robots.html">Robots</a></li>

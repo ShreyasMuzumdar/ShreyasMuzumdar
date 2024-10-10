@@ -11,50 +11,50 @@
             display: flex;
             justify-content: center;
             /* Center the robot divs horizontally */
-
-
+            margin-top: 20px;
         }
 
         .robot {
             width: 40%;
-            height: auto;
-            /* Maintains the aspect ratio */
-            margin: 0.5%;
-            /* Creates small gap between images */
+            height: auto; /* Maintains the aspect ratio */
+            margin: 0.5%; /* Creates small gap between images */
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            border: 1px solid #ccc;
-            /* Adds a border */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            /* Adds a shadow */
+            justify-content: flex-start; /* Align children to the top */
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             padding: 20px;
-            /* Adds padding inside the div */
-            border-radius: 10px;
-            /* Adds a border radius */
-            box-sizing: border-box;
-            /* Ensures padding and border are included in the width and height */
+            border: 0px;
+            box-sizing: border-box; /* Ensures padding and border are included in the width and height */
         }
 
         .robot img {
-            max-width: 100%;
-            /* Ensures images are responsive */
-            height: auto;
-            /* Maintains the aspect ratio */
+            max-width: 100%; /* Ensures images are responsive */
+            height: auto; /* Maintains the aspect ratio */
         }
 
         .robot h3 {
-            margin-top: 0;
-            /* Removes top margin */
-            padding-top: 0;
-            /* Removes top padding */
+            margin-top: 0; /* Removes top margin */
+            padding-top: 0; /* Removes top padding */
+            align-self: center; /* Aligns the header to the start of the container */
         }
+
         .wide-paragraph {
-            width: 80%;
-            /* Sets the width of the paragraph to 80% */
-            margin: 0 auto 25px auto;
-            /* Centers the paragraph and adds a bottom margin of 25px */
+            width: 80%; /* Sets the width of the paragraph to 80% */
+            margin: 0 auto 25px auto; /* Centers the paragraph and adds a bottom margin of 25px */
+        }
+
+        @media (max-width: 768px) {
+            .robots-container {
+                flex-direction: column; /* Stack the robot divs vertically */
+                align-items: center; /* Center the robot divs */
+            }
+
+            .robot {
+                width: 80%; /* Adjust the width for smaller screens */
+                margin-bottom: 20px; /* Add some space between the stacked divs */
+            }
         }
     </style>
 </head>
@@ -67,8 +67,8 @@
     </header>
 
     <nav>
-        <ul>
-            <li><a href="index.html">About</a></li>
+        <ul id="nav-menu">
+            <li><a href="index.html">Welcome</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="resume.html">Resume</a></li>
             <li class="selected"><a href="robots.html">Robots</a></li>
