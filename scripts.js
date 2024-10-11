@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     // Typing effect
     const textElement = document.getElementById('typing-effect');
-    const text = "Hello, I'm Shreyas Muzumdar. Welcome to my portfolio!<br>I am an engineering student, web developer, and a tech enthusiast.<br>Feel free to explore my projects and get in touch with me.";
+    const text = "Motivated high school student working to become a robotics engineer.<br> Over the past few years, worked on various projects broadening my engineering experience. <br> Eager to work hard while learning new concepts and helping you and your team in any way I can. ";
     let index = 0;
 
     function type() {
