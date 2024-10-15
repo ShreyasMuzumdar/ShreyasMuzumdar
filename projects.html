@@ -1,12 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - Shreyas Muzumdar</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .row {
+            display: flex;
+            justify-content: center;
+            /* Center the cell divs horizontally */
+            margin-top: 20px;
+        }
+
+        .cell {
+            width: 40%;
+            height: auto;
+            /* Maintains the aspect ratio */
+            margin: 0.5%;
+            /* Creates small gap between images */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            /* Align children to the top */
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border: 0px;
+            box-sizing: border-box;
+            /* Ensures padding and border are included in the width and height */
+        }
+
+        .cell img {
+            max-width: 100%;
+            /* Ensures images are responsive */
+            height: auto;
+            /* Maintains the aspect ratio */
+            border-radius: 5px;
+            border: '2px solid black';
+        }
+
+        .cell h3 {
+            margin-top: 0;
+            /* Removes top margin */
+            padding-top: 0;
+            /* Removes top padding */
+            align-self: center;
+            /* Aligns the header to the start of the container */
+        }
+
+        .wide-paragraph {
+            width: 80%;
+            /* Sets the width of the paragraph to 80% */
+            margin: 0 auto 25px auto;
+            /* Centers the paragraph and adds a bottom margin of 25px */
+        }
+
+        @media (max-width: 768px) {
+            .row {
+                flex-direction: column;
+                /* Stack the cell divs vertically */
+                align-items: center;
+                /* Center the cell divs */
+            }
+
+            .cell {
+                width: 80%;
+                /* Adjust the width for smaller screens */
+                margin-bottom: 20px;
+                /* Add some space between the stacked divs */
+            }
+        }
+
+
+        .cell h3 inline-content {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .cell h3 .inline-image {
+            height: 1em;
+            /* Adjusts the image height to match the text size */
+            margin-right: 0.5em;
+            /* Adds some space between the image and the text */
+            vertical-align: middle;
+            /* Aligns the image vertically with the text */
+        }
+
+        .cell h3 inline-text {
+            margin: 0;
+            /* Removes default margin from the h3 element */
+            display: inline;
+            /* Ensures the text is inline */
+        }
+    </style>
 
 </head>
+
 <body>
     <div class="scroll-indicator"></div>
 
@@ -19,52 +111,85 @@
             <li><a href="index.html">Welcome</a></li>
             <li class="selected"><a href="projects.html">Projects</a></li>
             <li><a href="resume.html">Resume</a></li>
-            <li><a href="robots.html">Robots</a></li>
+            <li><a href="cells.html">Robots</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
+    <div class="row">
+        <div class="cell">
+            <span class="inline-content">
+                <h3> Home automation system </h3>
+            </span>
+            <p>
+                Implemented a home automation system that integrates over 150 smart devices
+                from various ecosystems into a unified control hub using a Raspberry Pi server.
+                This setup allows for the management of lighting, security, climate control,
+                and entertainment systems through a single interface.
+                I configured automated routines, voice control, and remote access to enhance
+                convenience and efficiency, transforming the home into a
+                responsive environment tailored to daily needs.
+            </p>
+            <img src="Homeassistant.png" alt="Camera">
+            </a>
+        </div>
+        <div class="cell">
+
             <h3>Built & modified a 3D printer</h3>
             <p>
-                Installed Ender 3 v2, a Cr Touch, Direct Drive extrusion, & an additional z-axis to the 3D printer. The printer is now capable of printing with a variety of materials and has a moves with greater precision.   
-            </p> 
-                <a href="3Dprintertimelapse.mp4" rel="ar">
-                    <img src="3Dprintertimelapse.png" alt="3dprinter">
-                </a>
+                Installed an Ender 3 v2 3D printer and undertook several upgrades to enhance
+                its capabilities. First, Also, added a CR Touch for automatic bed leveling, which
+                significantly improves print accuracy and reduces the need for manual adjustments.
+                Next, I upgraded to a Direct Drive extrusion system, allowing the printer to
+                handle a wider range of materials, including flexible filaments, with greater
+                precision. Additionally, I installed an extra Z-axis to stabilize the printer's
+                movements, resulting in smoother and more reliable prints. These enhancements
+                collectively improve the printer's performance, making it more versatile and
+                efficient for various 3D printing projects.
+            </p>
+            <p> </p>
+            <img src="3Dprintertimelapse.gif" alt="3dprinter">
         </div>
-        <div class="project">
+
+    </div>
+    <div class="row">
+        <div class="cell">
             <h3>Auto tracking camera</h3>
-            <p>Created a camera attachment
-                that tracks and moves to detect
-                and follow faces</p>
-            <a href="CameraAttachment.usdz" rel="ar">
-                    <img src="CameraAttachment.png" alt="Camera">
-            </a>
+            <p>
+                Developed a camera attachment designed to track and follow faces in real-time.
+                This project involved integrating a camera with a motorized mount, which I
+                programmed to detect facial features using computer vision algorithms. The system
+                continuously adjusts the camera's position to keep the detected face centered in
+                the frame. This setup can be used for various applications, such as enhancing
+                video calls, improving security systems, or creating interactive installations.
+                By combining hardware and software components, I created a responsive and
+                dynamic camera system capable of real-time face tracking.
+            </p>
+            <img src="CameraAttachment.png" alt="Camera">
         </div>
-        <div class="project">
-            <img src="homeassistant-logo.png" alt="LinkedIn"><h3> Home automation system</h3>
-            <p>Installed a home automation
-                system that connects over 150
-                smart devices across multiple
-                ecosystems to a single Raspberry
-                Pi server</p>
-                    <img src="Homeassistant.png" alt="Camera">
-            </a>
-        </div>
-        <div class="project">
+        <div class="cell">
             <h3>Created an invisible mouse</h3>
-            <p>Developed a program that uses
-                the camera to detect the position
-                of a hand and uses it to move the
-                cursor</p>
-                    <img src="CameraAttachment.png" alt="Camera">
+            <p>
+                Developed a program that transforms a standard camera into an invisible mouse 
+                by detecting the position of a hand and using it to control the cursor. 
+                This project involved implementing computer vision techniques to accurately 
+                track hand movements in real-time. I utilized algorithms to identify the hand's 
+                position and gestures, translating these into cursor movements on the screen. 
+                This innovative approach eliminates the need for a physical mouse, offering a 
+                hands-free and intuitive way to interact with a computer. The invisible mouse 
+                can be particularly useful for accessibility purposes, gaming, and creative 
+                applications where traditional input devices may be limiting.
+              </p>
+
+              <h2> Will upload video or images when during my next break </h2>
+
             </a>
         </div>
-    </section>
+    </div>
+
+
 
     <script src="scripts.js"></script>
 </body>
+
 </html>
