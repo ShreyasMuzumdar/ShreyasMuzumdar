@@ -1,339 +1,155 @@
-/* Ensure the entire website has a white background */
+/* Robotics Theme Styles */
 body {
-    background-color: white;
-    /* Set background color to white */
-    color: black;
-    /* Set text color to black for readability */
-    font-family: Arial, sans-serif;
+    background-color: #0a0a0a; /* Dark background for futuristic look */
+    color: #00ffcc; /* Neon green text for robotics theme */
+    font-family: 'Roboto', sans-serif; /* Robotic font */
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+}
+
+/* Futuristic gradient background */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, #0a0a0a, #003333);
+    z-index: -1;
 }
 
 /* Dark mode styles */
 body.dark-mode {
-    background-color: black;
-    /* Set background color to black */
-    color: white;
-    /* Set text color to white for readability */
+    background-color: #000;
+    color: #00ffcc;
 }
 
-/* Ensure header has a white background */
+/* Header with glowing effect */
 header {
-    background-color: white; /* Set background color to white */
-    color: black; /* Set text color to black for readability */
-    padding: 0px 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #00ffcc;
+    padding: 20px 0;
     text-align: center;
-    transition: all 0.3s ease-in-out;
-    background-size: 200% 200%;
-    animation: none; /* Remove gradient animation */
-}
-
-/* Dark mode header styles */
-body.dark-mode header {
-    background-color: black;
-    /* Set background color to black */
-    color: white;
-    /* Set text color to white for readability */
+    border-bottom: 2px solid #00ffcc;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
 }
 
 header h1 {
-    font-size: 2.5em;
-    margin: 0px;
-    padding: 0px;
+    font-size: 3em;
+    margin: 0;
+    padding: 0;
+    text-shadow: 0 0 10px #00ffcc;
 }
 
-/* Dark mode title styles */
-body.dark-mode h1 {
-    color: white;
-    /* Set title color to white */
-}
-
-@keyframes gradientAnimation {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
+/* Navigation bar with glowing hover effect */
 nav {
-    background: #444;
+    background: rgba(0, 0, 0, 0.8);
     padding: 10px 0;
     text-align: center;
     position: sticky;
     top: 0;
     z-index: 100;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+    border-bottom: 2px solid #00ffcc;
 }
 
 nav ul li a {
-    color: #fff;
+    color: #00ffcc;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
-}
-
-/* Dark mode styles */
-body.dark-mode nav {
-    background: #222;
-    /* Darker background for dark mode */
-}
-
-body.dark-mode nav ul li a {
-    color: #ddd;
-    /* Lighter text color for dark mode */
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }
 
 nav ul li a:hover {
-    color: #ff6347;
-    background-color: rgba(255, 255, 255, 0.1);
-    /* Add background color on hover */
+    color: #ff0066; /* Neon pink for hover */
+    text-shadow: 0 0 10px #ff0066;
 }
 
-/* Hamburger menu styles */
-.hamburger {
-    display: none;
-    /* Hide by default */
-    font-size: 30px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    padding-left: 10px;
-}
-
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-    nav ul {
-        text-align: center;
-        /* Center the text */
-        padding: 0px;
-        /* Remove padding */
-        padding-bottom: 2px;
-        padding-right: 20px;
-        padding-left: 20px;
-    }
-}
-
+/* Robot container with hover animations */
 .robots-container {
     display: flex;
     justify-content: center;
-    /* Center the robot divs horizontally */
     gap: 2%;
-    /* Add a gap between the robot divs */
+    margin-top: 20px;
 }
 
 .robot {
     width: 40%;
     height: auto;
-    /* Maintains the aspect ratio */
     margin: 0.5%;
-    /* Creates small gap between images */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px solid #ccc;
-    /* Adds a border */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Adds a shadow */
+    border: 2px solid #00ffcc;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
     padding: 20px;
-    /* Adds padding inside the div */
     border-radius: 15px;
-    /* Adds a border radius */
-    box-sizing: border-box;
-    /* Ensures padding and border are included in the width and height */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.robot:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 255, 204, 0.8);
 }
 
 .robot img {
     max-width: 100%;
-    /* Ensures images are responsive */
     height: auto;
-    /* Maintains the aspect ratio */
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
 }
 
-.robot h3 {
-    margin-top: 0;
-    /* Removes top margin */
-    padding-top: 0;
-    /* Removes top padding */
+.robot img:hover {
+    transform: rotate(5deg) scale(1.1);
 }
 
-.wide-paragraph {
-    width: 80%;
-    /* Sets the width of the paragraph to 80% */
-    margin: 0 auto 10px auto;
-    /* Centers the paragraph and adds a bottom margin of 10px */
+/* Typing effect with robotic font */
+#typing-effect {
+    font-size: 1.5em;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid #00ffcc;
+    animation: blink-caret 0.75s step-end infinite;
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc;
 }
 
-.selected {
-    /* Adds a white line below the selected item */
-    border-bottom: 1px solid white;
-    padding-bottom: 3px;
-}
-
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-    .robots-container {
-        flex-direction: column;
-        /* Stack the robot divs vertically */
-        align-items: center;
-        /* Center the robot divs */
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
     }
-
-    .robot {
-        width: 80%;
-        /* Adjust the width for smaller screens */
-        margin-bottom: 20px;
-        /* Add some space between the stacked divs */
+    50% {
+        border-color: #00ffcc;
     }
 }
 
-section {
-    display: flex;
-    flex-direction: column; /* Stack the children vertically */
-    justify-content: center; /* Center the children horizontally */
-    align-items: center; /* Center the children vertically */
-    padding: 20px;
-    margin: 20px auto; /* Center the section horizontally */
-    background: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 600px; /* Set a fixed width for the section */
-    text-align: center; /* Center the text inside the elements */
-}
-
-section.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-    section {
-        margin-left: 20px;
-        margin-right: 20px;
-        width: '80vw';
-    }
-}
-
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background: #333;
-    color: #fff;
-}
-
-.project {
-    margin-bottom: 20px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.project:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-}
-
-.project h3 {
-    color: #444;
-    transition: color 0.3s ease-in-out;
-}
-
-.project:hover h3 {
-    color: #ff6347;
-}
-
-/* Button Hover Effects */
+/* Button hover effects */
 a.button {
     display: inline-block;
     padding: 10px 20px;
     margin-top: 10px;
-    background-color: #333;
-    color: #fff;
+    background-color: #00ffcc;
+    color: #0a0a0a;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s, transform 0.3s;
 }
 
 a.button:hover {
-    background-color: #ff6347;
+    background-color: #ff0066;
     transform: scale(1.1);
 }
 
-/* Text Shadow on Hover */
-h2,
-h3 {
-    transition: text-shadow 0.3s;
-}
-
-h2:hover,
-h3:hover {
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-
-/* Typing Effect */
-#typing-effect {
-    font-size: 1.5em;
-    font-family: 'Courier New', Courier, monospace;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 4px solid #333;
-    /* Cursor */
-    animation: blink-caret 0.75s step-end infinite;
-    width: 100%; /* Ensure the element takes the full width of its container */
-    max-width: 80%; /* Set a maximum width for the element */
-    margin: 0 auto; /* Center the element horizontally */
-    padding: 10px; /* Add some padding */
-    overflow: hidden; /* Hide any overflowing content */
-    white-space: pre-wrap; /* Preserve whitespace and wrap text */
-    word-wrap: break-word; /* Break long words to fit within the container */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-
-}
-
-@keyframes blink-caret {
-
-    from,
-    to {
-        border-color: transparent;
-    }
-
-    50% {
-        border-color: #333;
-    }
-}
-
-body.light-mode {
-    color: black;
-}
-
-.animation {
-    animation: blink-caret 0.75s step-end infinite;
-}
-
-/* Remove borders from sections and their child elements */
-section,
-section * {
-    border: none;
-    /* Remove any border */
-    background-color: white;
-    /* Ensure background remains white */
+/* Footer with glowing effect */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: #00ffcc;
+    border-top: 2px solid #00ffcc;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
 }

@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Shreyas Muzumdar</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet"> <!-- Futuristic font -->
     <style>
         .no-underline {
             text-decoration: none;
+            color: #00ffcc;
+            transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+        }
+
+        .no-underline:hover {
+            color: #ff0066;
+            text-shadow: 0 0 10px #ff0066;
         }
     </style>
 </head>
-
 <body>
     <div class="scroll-indicator"></div>
 
@@ -32,20 +38,21 @@
 
     <section id="contact">
         <p>
-            <img src="email.png" alt="Email"
-                style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;">
+            <img src="email.png" alt="Email" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;">
             <a href="mailto:shreyas2966@gmail.com" class="no-underline">shreyas2966@gmail.com</a>
         </p>
         <p>
-            <img src="LI-In-Bug.png" alt="LinkedIn"
-                style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;">
+            <img src="LI-In-Bug.png" alt="LinkedIn" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;">
             <a href="https://www.linkedin.com/in/shreyasmuzumdar/" target="_blank" class="no-underline">
                 Shreyas Muzumdar
             </a>
         </p>
     </section>
 
+    <footer>
+        <p>&copy; 2023 Shreyas Muzumdar. All rights reserved.</p>
+    </footer>
+
     <script src="scripts.js"></script>
 </body>
-
 </html>

@@ -1,64 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Robots - Shreyas Muzumdar</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .robots-container {
-            display: flex;
-            justify-content: center;
-            /* Center the robot divs horizontally */
-            margin-top: 20px;
-        }
-
-        .robot {
-            width: 40%;
-            height: auto; /* Maintains the aspect ratio */
-            margin: 0.5%; /* Creates small gap between images */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start; /* Align children to the top */
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            border: 0px;
-            box-sizing: border-box; /* Ensures padding and border are included in the width and height */
-        }
-
-        .robot img {
-            max-width: 100%; /* Ensures images are responsive */
-            height: auto; /* Maintains the aspect ratio */
-        }
-
-        .robot h3 {
-            margin-top: 0; /* Removes top margin */
-            padding-top: 0; /* Removes top padding */
-            align-self: center; /* Aligns the header to the start of the container */
-        }
-
-        .wide-paragraph {
-            width: 80%; /* Sets the width of the paragraph to 80% */
-            margin: 0 auto 25px auto; /* Centers the paragraph and adds a bottom margin of 25px */
-        }
-
-        @media (max-width: 768px) {
-            .robots-container {
-                flex-direction: column; /* Stack the robot divs vertically */
-                align-items: center; /* Center the robot divs */
-            }
-
-            .robot {
-                width: 80%; /* Adjust the width for smaller screens */
-                margin-bottom: 20px; /* Add some space between the stacked divs */
-            }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet"> <!-- Futuristic font -->
 </head>
-
 <body>
     <div class="scroll-indicator"></div>
 
@@ -67,7 +15,7 @@
     </header>
 
     <nav>
-        <ul id="nav-menu">
+        <ul>
             <li><a href="index.html">Welcome</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="resume.html">Resume</a></li>
@@ -79,25 +27,24 @@
     <div class="robots-container">
         <div class="robot">
             <h3>BlackBox</h3>
-            <p>Details about Robot Project 2.</p>
+            <p>A futuristic robot designed for exploration and data collection.</p>
             <a href="BlackBox.usdz" rel="ar">
-                <img src="BlackBox.png" alt="Robot Project 2">
+                <img src="BlackBox.png" alt="BlackBox Robot">
             </a>
         </div>
         <div class="robot">
             <h3>PlugBot</h3>
-            <p class="wide-paragraph">
-                PlugBot was our robot during the Powerplay season. In the State Championship, we were the Winning
-                Alliance - 1st Team Selected and had the highest scoring match in the State Championship with 269
-                points.
-            </p>
+            <p>An advanced robot built for precision and efficiency in competitions.</p>
             <a href="PlugBot.usdz" rel="ar">
-                <img src="PlugBot.png" alt="Robot Project 1">
+                <img src="PlugBot.png" alt="PlugBot Robot">
             </a>
         </div>
     </div>
 
+    <footer>
+        <p>&copy; 2023 Shreyas Muzumdar. All rights reserved.</p>
+    </footer>
+
     <script src="scripts.js"></script>
 </body>
-
 </html>

@@ -1,83 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - Shreyas Muzumdar</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet"> <!-- Futuristic font -->
     <style>
         .row {
             display: flex;
             justify-content: center;
-            /* Center the cell divs horizontally */
             margin-top: 20px;
         }
 
         .cell {
             width: 40%;
             height: auto;
-            /* Maintains the aspect ratio */
             margin: 0.5%;
-            /* Creates small gap between images */
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
-            /* Align children to the top */
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
             padding: 20px;
-            border: 0px;
-            box-sizing: border-box;
-            /* Ensures padding and border are included in the width and height */
+            border: 2px solid #00ffcc;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .cell:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(0, 255, 204, 0.8);
         }
 
         .cell img {
             max-width: 100%;
-            /* Ensures images are responsive */
             height: auto;
-            /* Maintains the aspect ratio */
-            border-radius: 5px;
-            border: '2px solid black';
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
         }
 
-        .cell h3 {
-            margin-top: 0;
-            /* Removes top margin */
-            padding-top: 0;
-            /* Removes top padding */
-            align-self: center;
-            /* Aligns the header to the start of the container */
+        .cell img:hover {
+            transform: rotate(5deg) scale(1.1);
         }
 
         .wide-paragraph {
             width: 80%;
-            /* Sets the width of the paragraph to 80% */
             margin: 0 auto 25px auto;
-            /* Centers the paragraph and adds a bottom margin of 25px */
         }
 
         @media (max-width: 768px) {
             .row {
                 flex-direction: column;
-                /* Stack the cell divs vertically */
                 align-items: center;
-                /* Center the cell divs */
             }
 
             .cell {
                 width: 80%;
-                /* Adjust the width for smaller screens */
                 margin-bottom: 20px;
-                /* Add some space between the stacked divs */
             }
         }
-
     </style>
-
 </head>
-
 <body>
     <div class="scroll-indicator"></div>
 
@@ -97,74 +81,46 @@
 
     <div class="row">
         <div class="cell">
-            <h3> Home automation system </h3>
+            <h3>Home Automation System</h3>
             <p>
                 Implemented a home automation system that integrates over 150 smart devices
                 from various ecosystems into a unified control hub using a Raspberry Pi server.
-                This setup allows for the management of lighting, security, climate control,
-                and entertainment systems through a single interface.
-                I configured automated routines, voice control, and remote access to enhance
-                convenience and efficiency, transforming the home into a
-                responsive environment tailored to daily needs.
             </p>
-            <img src="Homeassistant.png" alt="Camera">
-            </a>
+            <img src="Homeassistant.png" alt="Home Automation System">
         </div>
         <div class="cell">
-            <h3>Built & modified a 3D printer</h3>
+            <h3>3D Printer Modifications</h3>
             <p>
-                Installed an Ender 3 v2 3D printer and undertook several upgrades to enhance
-                its capabilities. First, Also, added a CR Touch for automatic bed leveling, which
-                significantly improves print accuracy and reduces the need for manual adjustments.
-                Next, I upgraded to a Direct Drive extrusion system, allowing the printer to
-                handle a wider range of materials, including flexible filaments, with greater
-                precision. Additionally, I installed an extra Z-axis to stabilize the printer's
-                movements, resulting in smoother and more reliable prints. These enhancements
-                collectively improve the printer's performance, making it more versatile and
-                efficient for various 3D printing projects.
+                Upgraded an Ender 3 v2 3D printer with a CR Touch, Direct Drive extrusion,
+                and an extra Z-axis for improved performance.
             </p>
-            <img src="3Dprintertimelapse.gif" alt="3dprinter">
+            <img src="3Dprintertimelapse.gif" alt="3D Printer">
         </div>
-
     </div>
+
     <div class="row">
         <div class="cell">
-            <h3>Auto tracking camera</h3>
+            <h3>Auto Tracking Camera</h3>
             <p>
-                Developed a camera attachment designed to track and follow faces in real-time.
-                This project involved integrating a camera with a motorized mount, which I
-                programmed to detect facial features using computer vision algorithms. The system
-                continuously adjusts the camera's position to keep the detected face centered in
-                the frame. This setup can be used for various applications, such as enhancing
-                video calls, improving security systems, or creating interactive installations.
-                By combining hardware and software components, I created a responsive and
-                dynamic camera system capable of real-time face tracking.
+                Developed a camera attachment that tracks and follows faces in real-time using
+                computer vision algorithms.
             </p>
-            <img src="cameraattachmentpic.png" alt="Camera">
+            <img src="cameraattachmentpic.png" alt="Auto Tracking Camera">
         </div>
         <div class="cell">
-            <h3>An invisible mouse</h3>
+            <h3>Invisible Mouse</h3>
             <p>
-                Developed a program that transforms a standard camera into an invisible mouse 
-                by detecting the position of a hand and using it to control the cursor. 
-                This project involved implementing computer vision techniques to accurately 
-                track hand movements in real-time. I utilized algorithms to identify the hand's 
-                position and gestures, translating these into cursor movements on the screen. 
-                This innovative approach eliminates the need for a physical mouse, offering a 
-                hands-free and intuitive way to interact with a computer. The invisible mouse 
-                can be particularly useful for accessibility purposes, gaming, and creative 
-                applications where traditional input devices may be limiting.
-              </p>
-
-              <h2> Will upload video or images soon </h2>
-
-            </a>
+                Created a program that transforms a standard camera into an invisible mouse
+                by detecting hand movements.
+            </p>
+            <h2>Will upload video or images soon</h2>
         </div>
     </div>
 
-
+    <footer>
+        <p>&copy; 2023 Shreyas Muzumdar. All rights reserved.</p>
+    </footer>
 
     <script src="scripts.js"></script>
 </body>
-
 </html>
