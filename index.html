@@ -6,6 +6,33 @@
     <title>About - Shreyas Muzumdar</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet"> <!-- Futuristic font -->
+    <style>
+        /* Ensure the typing effect text wraps */
+        #typing-effect {
+            font-size: 1.5em;
+            font-family: 'Courier New', Courier, monospace;
+            white-space: pre-wrap; /* Allow text to wrap */
+            overflow: hidden;
+            border-right: 4px solid #00ffcc;
+            animation: blink-caret 0.75s step-end infinite;
+            color: #00ffcc;
+            text-shadow: 0 0 10px #00ffcc;
+            width: 100%; /* Ensure it takes full width */
+            max-width: 80%; /* Limit width for better readability */
+            margin: 0 auto; /* Center the text */
+            padding: 10px; /* Add padding */
+            box-sizing: border-box; /* Include padding in width */
+        }
+
+        @keyframes blink-caret {
+            from, to {
+                border-color: transparent;
+            }
+            50% {
+                border-color: #00ffcc;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="scroll-indicator"></div>

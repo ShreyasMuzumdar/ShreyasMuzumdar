@@ -1,7 +1,7 @@
 // Typing effect with robotic sound simulation
 document.addEventListener('DOMContentLoaded', function() {
     const textElement = document.getElementById('typing-effect');
-    const text = "Hello, I am Shreyas Muzumdar. A future robotics engineer. Let's build the future together!";
+    const text = "Hello, My name is Shreyas Muzumdar. Motivated high school student working to become a robotics engineer. Over the past few years, worked on various projects broadening my engineering experience. Eager to work hard while learning new concepts and helping you and your team in any way I can.";
     let index = 0;
 
     function type() {
